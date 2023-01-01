@@ -107,9 +107,9 @@ public class NoResourcesTradesControllerTest {
     public void findAllTradesByNonExistingUserId() throws Exception {
         /**
          *
-         * Find all the trades by non-existing user id 1
+         * Find all the trades by non-existing user id 111
          */
-        mockMvc.perform(get("/trades/users/1"))
+        mockMvc.perform(get("/trades/users/111"))
                 .andExpect(status().isNotFound());
     }
 
@@ -141,11 +141,11 @@ public class NoResourcesTradesControllerTest {
     public void createTrade() throws Exception {
         /**
          *
-         * Create trade with id 1
+         * Create trade with id 26
          *
          * The request body is:
          * {
-         *     "id": 8,
+         *     "id": 26,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -157,7 +157,7 @@ public class NoResourcesTradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String json = "{\"id\": 8, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String json = "{\"id\": 26, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
 
         mockMvc.perform(
                 post("/trades")

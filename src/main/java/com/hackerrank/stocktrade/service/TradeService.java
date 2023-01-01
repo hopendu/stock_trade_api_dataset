@@ -34,17 +34,15 @@ public class TradeService {
 
         Long id = trade.getId();
 
-        if( id != null ){
-            boolean tradeExists = tradeRepository.existsById(id);
-            if( !tradeExists ) return Optional.of(tradeRepository.save(trade));
-        }
-        return optionalTrade;
+        if( id == null) return Optional.of(tradeRepository.save(trade));
 
-//        if( trade != null && trade.getId() != null ) {
-//            if(!tradeRepository.existsById(trade.getId())) {
-//                return Optional.of(tradeRepository.save(trade));
-//            }
-//        } return optionalTrade;
+        boolean tradeExists = tradeRepository.existsById(id);
+
+        if(!tradeExists) {
+            optionalTrade = Optional.of(tradeRepository.save(trade));
+        }
+
+        return optionalTrade;
     }
 
     public Optional<List<Trade>> findAllTrades() {
@@ -64,7 +62,7 @@ public class TradeService {
 
         List<Trade> trades = this.findAllByStockSymbolAndTradeType(stockSymbol, tradeType);
 
-        if(trades.isEmpty()) return optionalTrades;
+        if(trades.isEmpty()) return Optional.of(new ArrayList<>());
 
         List<Trade> filteredTrades = stocksService.searchTradesInDateRange(trades, startDate, endDate);
 

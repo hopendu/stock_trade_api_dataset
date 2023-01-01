@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.SimpleFormatter;
 import java.util.stream.Collectors;
 
 @Service
@@ -65,8 +68,13 @@ public class StocksService {
             List<Trade> trades,
             Date startDate,
             Date endDate) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String start = format.format(startDate);
+        String end = format.format(endDate);
         return trades.stream().filter( trade ->
-                        trade.getTimestamp().before(endDate) && trade.getTimestamp().after(startDate))
+                        trade.getTimestamp().before(endDate) && trade.getTimestamp().after(startDate)
+                || trade.getTimestamp().toString().contains(end)
+                || trade.getTimestamp().toString().contains(start))
                 .collect(Collectors.toList());
     }
 

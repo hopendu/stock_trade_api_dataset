@@ -70,8 +70,11 @@ public class TradesController {
 
         Optional<List<Trade>> optionalTrades = this.tradeService.findAllTradeByStockSymbolAndTradeTypeInDateRange(symbol, tradeType, startDate, endDate);
 
-        return optionalTrades.map(trades -> new ResponseEntity<>(trades, HttpStatus.OK)).
-                                            orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        if(optionalTrades.isPresent() && optionalTrades.get().isEmpty())
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return optionalTrades.map(trades -> new ResponseEntity<>(trades, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(new ArrayList<>(), HttpStatus.OK));
+
+
     }
     
 }

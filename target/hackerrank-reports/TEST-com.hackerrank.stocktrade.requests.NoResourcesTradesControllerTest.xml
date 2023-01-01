@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" tests="6" failures="0" errors="0" skipped="0" time="8.711">
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange" time="8.581" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTrades" time="0.029" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingUserId" time="0.013" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findTradeByNonExistingId" time="0.026" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTrade" time="0.055" />
+<testsuite name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" tests="6" failures="0" errors="0" skipped="0" time="4.334">
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange" time="4.177" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTrades" time="0.045" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingUserId" time="0.017" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findTradeByNonExistingId" time="0.029" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTrade" time="0.059" />
   <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTradeWithExistingId" time="0.007" />
 </testsuite>
 

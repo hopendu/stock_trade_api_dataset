@@ -61,11 +61,11 @@ public class TradesControllerTest {
     public void createTrade() throws Exception {
         /**
          *
-         * Create trade with id 1
+         * Create trade with id 31
          *
          * The request body is:
          * {
-         *     "id": 1,
+         *     "id": 31,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -77,7 +77,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String json = "{\"id\": 1, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String json = "{\"id\": 31, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -88,14 +88,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 2
+         * Create trade with id 32
          *
          * The request body is:
          * {
-         *     "id": 2,
+         *     "id": 32,
          *     "type": "buy",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "A",
@@ -104,7 +104,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-28 13:15:52"
          * }
          */
-        json = "{\"id\": 2, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 19, \"price\": 153.57, \"timestamp\": \"2016-12-28 13:15:52\"}";
+        json = "{\"id\": 32, \"type\": \"buy\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 19, \"price\": 153.57, \"timestamp\": \"2016-12-28 13:15:52\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -115,11 +115,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 3
+         * Create trade with id 33
          *
          * The request body is:
          * {
-         *     "id": 3,
+         *     "id": 33,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -131,7 +131,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-28 13:18:18"
          * }
          */
-        json = "{\"id\": 3, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"A\", \"shares\": 12, \"price\": 135.89, \"timestamp\": \"2016-12-28 13:18:18\"}";
+        json = "{\"id\": 33, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"A\", \"shares\": 12, \"price\": 135.89, \"timestamp\": \"2016-12-28 13:18:18\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -142,11 +142,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 4
+         * Create trade with id 34
          *
          * The request body is:
          * {
-         *     "id": 4,
+         *     "id": 34,
          *     "type": "buy",
          *     "user": {
          *         "id": 2,
@@ -158,7 +158,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-28 15:15:50"
          * }
          */
-        json = "{\"id\": 4, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"MMS\", \"shares\": 15, \"price\": 183.45, \"timestamp\": \"2016-12-28 15:15:50\"}";
+        json = "{\"id\": 34, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"MMS\", \"shares\": 15, \"price\": 183.45, \"timestamp\": \"2016-12-28 15:15:50\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -169,11 +169,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 5
+         * Create trade with id 35
          *
          * The request body is:
          * {
-         *     "id": 5,
+         *     "id": 35,
          *     "type": "buy",
          *     "user": {
          *         "id": 2,
@@ -185,7 +185,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-29 09:05:23"
          * }
          */
-        json = "{\"id\": 5, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 10, \"price\": 190.73, \"timestamp\": \"2016-12-29 09:05:23\"}";
+        json = "{\"id\": 35, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 10, \"price\": 190.73, \"timestamp\": \"2016-12-29 09:05:23\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -196,11 +196,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 6
+         * Create trade with id 36
          *
          * The request body is:
          * {
-         *     "id": 6,
+         *     "id": 36,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -212,7 +212,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-30 11:42:40"
          * }
          */
-        json = "{\"id\": 6, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 137.86, \"timestamp\": \"2016-12-30 11:42:40\"}";
+        json = "{\"id\": 36, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 137.86, \"timestamp\": \"2016-12-30 11:42:40\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -223,11 +223,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 7
+         * Create trade with id 37
          *
          * The request body is:
          * {
-         *     "id": 7,
+         *     "id": 37,
          *     "type": "buy",
          *     "user": {
          *         "id": 2,
@@ -239,7 +239,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-30 12:35:21"
          * }
          */
-        json = "{\"id\": 7, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"MMS\", \"shares\": 19, \"price\": 183.45, \"timestamp\": \"2016-12-30 12:35:21\"}";
+        json = "{\"id\": 37, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"MMS\", \"shares\": 19, \"price\": 183.45, \"timestamp\": \"2016-12-30 12:35:21\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -250,11 +250,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 8
+         * Create trade with id 38
          *
          * The request body is:
          * {
-         *     "id": 8,
+         *     "id": 38,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -266,7 +266,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-30 13:07:19"
          * }
          */
-        json = "{\"id\": 8, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"WEX\", \"shares\": 11, \"price\": 172.35, \"timestamp\": \"2016-12-30 13:07:19\"}";
+        json = "{\"id\": 38, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"WEX\", \"shares\": 11, \"price\": 172.35, \"timestamp\": \"2016-12-30 13:07:19\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -277,11 +277,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 9
+         * Create trade with id 39
          *
          * The request body is:
          * {
-         *     "id": 9,
+         *     "id": 39,
          *     "type": "buy",
          *     "user": {
          *         "id": 3,
@@ -293,7 +293,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-30 13:36:20"
          * }
          */
-        json = "{\"id\": 9, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 25, \"price\": 154.77, \"timestamp\": \"2016-12-30 13:36:20\"}";
+        json = "{\"id\": 39, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 25, \"price\": 154.77, \"timestamp\": \"2016-12-30 13:36:20\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -304,14 +304,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 10
+         * Create trade with id 40
          *
          * The request body is:
          * {
-         *     "id": 10,
+         *     "id": 40,
          *     "type": "buy",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "MMS",
@@ -320,7 +320,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-30 14:48:14"
          * }
          */
-        json = "{\"id\": 10, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 28, \"price\": 152.93, \"timestamp\": \"2016-12-30 14:48:14\"}";
+        json = "{\"id\": 40, \"type\": \"buy\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 28, \"price\": 152.93, \"timestamp\": \"2016-12-30 14:48:14\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -331,11 +331,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 11
+         * Create trade with id 41
          *
          * The request body is:
          * {
-         *     "id": 11,
+         *     "id": 41,
          *     "type": "buy",
          *     "user": {
          *         "id": 3,
@@ -347,7 +347,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-31 09:59:16"
          * }
          */
-        json = "{\"id\": 11, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 154.77, \"timestamp\": \"2016-12-31 09:59:16\"}";
+        json = "{\"id\": 41, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 154.77, \"timestamp\": \"2016-12-31 09:59:16\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -358,11 +358,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 12
+         * Create trade with id 42
          *
          * The request body is:
          * {
-         *     "id": 12,
+         *     "id": 42,
          *     "type": "buy",
          *     "user": {
          *         "id": 2,
@@ -374,7 +374,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-31 12:01:56"
          * }
          */
-        json = "{\"id\": 12, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 18, \"price\": 172.35, \"timestamp\": \"2016-12-31 12:01:56\"}";
+        json = "{\"id\": 42, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 18, \"price\": 172.35, \"timestamp\": \"2016-12-31 12:01:56\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -385,11 +385,11 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 13
+         * Create trade with id 43
          *
          * The request body is:
          * {
-         *     "id": 13,
+         *     "id": 43,
          *     "type": "buy",
          *     "user": {
          *         "id": 3,
@@ -401,7 +401,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-31 13:27:40"
          * }
          */
-        json = "{\"id\": 13, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"A\", \"shares\": 22, \"price\": 135.89, \"timestamp\": \"2016-12-31 13:27:40\"}";
+        json = "{\"id\": 43, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"A\", \"shares\": 22, \"price\": 135.89, \"timestamp\": \"2016-12-31 13:27:40\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -412,14 +412,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 14
+         * Create trade with id 44
          *
          * The request body is:
          * {
-         *     "id": 14,
+         *     "id": 44,
          *     "type": "buy",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "A",
@@ -428,7 +428,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-31 15:29:15"
          * }
          */
-        json = "{\"id\": 14, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 30, \"price\": 136.68, \"timestamp\": \"2016-12-31 15:29:15\"}";
+        json = "{\"id\": 44, \"type\": \"buy\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 30, \"price\": 136.68, \"timestamp\": \"2016-12-31 15:29:15\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -439,14 +439,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 15
+         * Create trade with id 45
          *
          * The request body is:
          * {
          *     "id": 15,
          *     "type": "buy",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "MMS",
@@ -455,7 +455,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-31 15:47:40"
          * }
          */
-        json = "{\"id\": 15, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 29, \"price\": 168.67, \"timestamp\": \"2016-12-31 15:47:40\"}";
+        json = "{\"id\": 45, \"type\": \"buy\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 29, \"price\": 168.67, \"timestamp\": \"2016-12-31 15:47:40\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -466,14 +466,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 16
+         * Create trade with id 46
          *
          * The request body is:
          * {
-         *     "id": 16,
+         *     "id": 46,
          *     "type": "sell",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "A",
@@ -482,7 +482,7 @@ public class TradesControllerTest {
          *     "timestamp": "2017-01-03 11:59:32"
          * }
          */
-        json = "{\"id\": 16, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 25, \"price\": 149.35, \"timestamp\": \"2017-01-03 11:59:32\"}";
+        json = "{\"id\": 46, \"type\": \"sell\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 25, \"price\": 149.35, \"timestamp\": \"2017-01-03 11:59:32\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -493,14 +493,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 17
+         * Create trade with id 47
          *
          * The request body is:
          * {
-         *     "id": 17,
+         *     "id": 47,
          *     "type": "sell",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "MMS",
@@ -509,7 +509,7 @@ public class TradesControllerTest {
          *     "timestamp": "2017-01-03 14:27:42"
          * }
          */
-        json = "{\"id\": 17, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 25, \"price\": 182.01, \"timestamp\": \"2017-01-03 14:27:42\"}";
+        json = "{\"id\": 47, \"type\": \"sell\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 25, \"price\": 182.01, \"timestamp\": \"2017-01-03 14:27:42\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -520,14 +520,14 @@ public class TradesControllerTest {
 
         /**
          *
-         * Create trade with id 18
+         * Create trade with id 48
          *
          * The request body is:
          * {
-         *     "id": 18,
+         *     "id": 48,
          *     "type": "sell",
          *     "user": {
-         *         "id": 1,
+         *         "id": 101,
          *         "name": "Jennifer Long"
          *     },
          *     "symbol": "MMS",
@@ -536,7 +536,7 @@ public class TradesControllerTest {
          *     "timestamp": "2017-01-05 15:43:00"
          * }
          */
-        json = "{\"id\": 18, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 19, \"price\": 171.17, \"timestamp\": \"2017-01-05 15:43:00\"}";
+        json = "{\"id\": 48, \"type\": \"sell\", \"user\": {\"id\": 101, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 19, \"price\": 171.17, \"timestamp\": \"2017-01-05 15:43:00\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -610,7 +610,7 @@ public class TradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String res = "{\"id\": 1, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String res = "{\"id\":1,\"type\":\"buy\",\"user\":{\"id\":4,\"name\":\"Derrick Garcia\"},\"symbol\":\"ZAYO\",\"shares\":11,\"price\":154.77,\"timestamp\":\"2016-12-28T16:44:37.000+0000\"}";
 
         assertTrue(
                 ResultMatcher.matchJson(
@@ -634,9 +634,9 @@ public class TradesControllerTest {
     public void findTradeByNonExistingId() throws Exception {
         /**
          *
-         * Find trade by non-existing id 19
+         * Find trade by non-existing id 260
          */
-        mockMvc.perform(get("/trades/19"))
+        mockMvc.perform(get("/trades/260"))
                 .andExpect(status().isNotFound());
     }
 
@@ -741,8 +741,8 @@ public class TradesControllerTest {
          *     }
          * ]
          */
-        String res = "[{\"id\": 2, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 19, \"price\": 153.57, \"timestamp\": \"2016-12-28 13:15:52\"}, {\"id\": 10, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 28, \"price\": 152.93, \"timestamp\": \"2016-12-30 14:48:14\"}, {\"id\": 14, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 30, \"price\": 136.68, \"timestamp\": \"2016-12-31 15:29:15\"}, {\"id\": 15, \"type\": \"buy\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 29, \"price\": 168.67, \"timestamp\": \"2016-12-31 15:47:40\"}, {\"id\": 16, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 25, \"price\": 149.35, \"timestamp\": \"2017-01-03 11:59:32\"}, {\"id\": 17, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 25, \"price\": 182.01, \"timestamp\": \"2017-01-03 14:27:42\"}, {\"id\": 18, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"MMS\", \"shares\": 19, \"price\": 171.17, \"timestamp\": \"2017-01-05 15:43:00\"}]";
-
+        String res =
+                "[{\"id\":2,\"type\":\"buy\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"A\",\"shares\":19,\"price\":153.57,\"timestamp\":\"2016-12-28T18:15:52.000+0000\"},{\"id\":10,\"type\":\"buy\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"MMS\",\"shares\":28,\"price\":152.93,\"timestamp\":\"2016-12-30T19:48:14.000+0000\"},{\"id\":14,\"type\":\"buy\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"A\",\"shares\":30,\"price\":136.68,\"timestamp\":\"2016-12-31T20:29:15.000+0000\"},{\"id\":15,\"type\":\"buy\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"MMS\",\"shares\":29,\"price\":168.67,\"timestamp\":\"2016-12-31T20:47:40.000+0000\"},{\"id\":16,\"type\":\"sell\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"A\",\"shares\":25,\"price\":149.35,\"timestamp\":\"2017-01-03T16:59:32.000+0000\"},{\"id\":17,\"type\":\"sell\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"MMS\",\"shares\":25,\"price\":182.01,\"timestamp\":\"2017-01-03T19:27:42.000+0000\"},{\"id\":18,\"type\":\"sell\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"MMS\",\"shares\":19,\"price\":171.17,\"timestamp\":\"2017-01-05T20:43:00.000+0000\"}]";
         assertTrue(
                 ResultMatcher.matchJsonArray(
                         mockMvc.perform(get("/trades/users/1"))
@@ -765,9 +765,9 @@ public class TradesControllerTest {
     public void findAllTradesByNonExistingUserId() throws Exception {
         /**
          *
-         * Find all the trades by user id 5
+         * Find all the trades by user id 5555
          */
-        mockMvc.perform(get("/trades/users/5"))
+        mockMvc.perform(get("/trades/users/555"))
                 .andExpect(status().isNotFound());
     }
 
@@ -800,7 +800,7 @@ public class TradesControllerTest {
          *     }
          * ]
          */
-        String res = "[{\"id\": 16, \"type\": \"sell\", \"user\": {\"id\": 1, \"name\": \"Jennifer Long\"}, \"symbol\": \"A\", \"shares\": 25, \"price\": 149.35, \"timestamp\": \"2017-01-03 11:59:32\"}]";
+        String res = "[{\"id\":16,\"type\":\"sell\",\"user\":{\"id\":1,\"name\":\"Jennifer Long\"},\"symbol\":\"A\",\"shares\":25,\"price\":149.35,\"timestamp\":\"2017-01-03T16:59:32.000+0000\"}]";
 
         assertTrue(
                 ResultMatcher.matchJsonArray(
@@ -875,8 +875,9 @@ public class TradesControllerTest {
          *     }
          * ]
          */
-        res = "[{\"id\": 5, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 10, \"price\": 190.73, \"timestamp\": \"2016-12-29 09:05:23\"}, {\"id\": 8, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"WEX\", \"shares\": 11, \"price\": 172.35, \"timestamp\": \"2016-12-30 13:07:19\"}, {\"id\": 12, \"type\": \"buy\", \"user\": {\"id\": 2, \"name\": \"Daniel Cortez\"}, \"symbol\": \"WEX\", \"shares\": 18, \"price\": 172.35, \"timestamp\": \"2016-12-31 12:01:56\"}]";
-
+        res = "[{\"id\":5,\"type\":\"buy\",\"user\":{\"id\":2,\"name\":\"Daniel Cortez\"},\"symbol\":\"WEX\",\"shares\":10,\"price\":190.73,\"timestamp\":\"2016-12-29T14:05:23.000+0000\"}," +
+                "{\"id\":8,\"type\":\"buy\",\"user\":{\"id\":4,\"name\":\"Derrick Garcia\"},\"symbol\":\"WEX\",\"shares\":11,\"price\":172.35,\"timestamp\":\"2016-12-30T18:07:19.000+0000\"}," +
+                "{\"id\":12,\"type\":\"buy\",\"user\":{\"id\":2,\"name\":\"Daniel Cortez\"},\"symbol\":\"WEX\",\"shares\":18,\"price\":172.35,\"timestamp\":\"2016-12-31T17:01:56.000+0000\"}]";
         assertTrue(
                 ResultMatcher.matchJsonArray(
                         mockMvc.perform(get("/trades/stocks/WEX?type=buy&start=2016-12-28&end=2017-01-02"))
@@ -931,7 +932,9 @@ public class TradesControllerTest {
          *     }
          * ]
          */
-        res = "[{\"id\": 6, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 137.86, \"timestamp\": \"2016-12-30 11:42:40\"}, {\"id\": 9, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 25, \"price\": 154.77, \"timestamp\": \"2016-12-30 13:36:20\"}, {\"id\": 11, \"type\": \"buy\", \"user\": {\"id\": 3, \"name\": \"Connie Palmer\"}, \"symbol\": \"ZAYO\", \"shares\": 30, \"price\": 154.77, \"timestamp\": \"2016-12-31 09:59:16\"}]";
+        res = "[{\"id\":6,\"type\":\"buy\",\"user\":{\"id\":4,\"name\":\"Derrick Garcia\"},\"symbol\":\"ZAYO\",\"shares\":30,\"price\":137.86,\"timestamp\":\"2016-12-30T16:42:40.000+0000\"}," +
+                "{\"id\":9,\"type\":\"buy\",\"user\":{\"id\":3,\"name\":\"Connie Palmer\"},\"symbol\":\"ZAYO\",\"shares\":25,\"price\":154.77,\"timestamp\":\"2016-12-30T18:36:20.000+0000\"}," +
+                "{\"id\":11,\"type\":\"buy\",\"user\":{\"id\":3,\"name\":\"Connie Palmer\"},\"symbol\":\"ZAYO\",\"shares\":30,\"price\":154.77,\"timestamp\":\"2016-12-31T14:59:16.000+0000\"}]";
 
         assertTrue(
                 ResultMatcher.matchJsonArray(

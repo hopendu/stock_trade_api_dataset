@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hackerrank.stocktrade.requests.StocksControllerTest" tests="2" failures="0" errors="0" skipped="0" time="4.013">
+  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByStockSymbolInDateRange" time="4.001" />
+  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByNonExistingStockSymbolInDateRange" time="0.012" />
+</testsuite>
+

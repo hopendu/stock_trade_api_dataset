@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hackerrank.stocktrade.requests.TradesControllerTest" tests="9" failures="2" errors="0" skipped="0" time="90.476">
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.createTrade" time="19.942" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.createTradeWithExistingId" time="0.008" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findTradeById" time="30.054" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findTradeByNonExistingId" time="0.007" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByUserId" time="7.0" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByNonExistingUserId" time="0.006" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByStockSymbolAndTradeTypeInDateRange" time="27.876">
+    <failure>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByStockSymbolAndTradeTypeInDateRange(TradesControllerTest.java:805)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.RunPrepareTestInstanceCallbacks.evaluate(RunPrepareTestInstanceCallbacks.java:64)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.springframework.test.context.junit4.statements.SpringFailOnTimeout.evaluate(SpringFailOnTimeout.java:87)
+	at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:103)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:103)
+	at org.springframework.test.context.junit4.rules.SpringClassRule$TestContextManagerCacheEvictor.evaluate(SpringClassRule.java:190)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)</failure>
+  </testcase>
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange" time="5.555" />
+  <testcase classname="com.hackerrank.stocktrade.requests.TradesControllerTest" name="com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTrades" time="0.028">
+    <failure>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTrades(TradesControllerTest.java:1202)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.RunPrepareTestInstanceCallbacks.evaluate(RunPrepareTestInstanceCallbacks.java:64)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.springframework.test.context.junit4.statements.SpringFailOnTimeout.evaluate(SpringFailOnTimeout.java:87)
+	at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:103)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.springframework.test.context.junit4.statements.ProfileValueChecker.evaluate(ProfileValueChecker.java:103)
+	at org.springframework.test.context.junit4.rules.SpringClassRule$TestContextManagerCacheEvictor.evaluate(SpringClassRule.java:190)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)</failure>
+  </testcase>
+</testsuite>
+
