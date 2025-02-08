@@ -194,7 +194,7 @@ public class NoResourcesTradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String json = "{\"id\": 1, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String json = "{\"id\": null, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
 
         mockMvc.perform(
                 post("/trades")

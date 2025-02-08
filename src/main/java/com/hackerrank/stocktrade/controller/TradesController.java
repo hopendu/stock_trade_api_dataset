@@ -27,7 +27,10 @@ public class TradesController {
     @PostMapping
     public ResponseEntity<Trade> addTrade(@RequestBody Trade trade) {
          Trade createdTrade = tradeService.addTrade(trade);
-         return new ResponseEntity<>(createdTrade, HttpStatus.CREATED);
+         if( createdTrade != null ) {
+             return new ResponseEntity<>(createdTrade, HttpStatus.CREATED);
+         }
+         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping

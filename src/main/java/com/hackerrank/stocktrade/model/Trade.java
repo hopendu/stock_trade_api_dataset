@@ -17,7 +17,7 @@ import java.util.Date;
 public class Trade {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String type;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
