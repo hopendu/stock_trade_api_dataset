@@ -1,6 +1,6 @@
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/TestSuite.java
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/NoResourcesStocksControllerTest.java
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/NoResourcesTradesControllerTest.java
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/ResourcesControllerTest.java
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/StocksControllerTest.java
-/Users/linds/Documents/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/TradesControllerTest.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/TestSuite.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/NoResourcesStocksControllerTest.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/NoResourcesTradesControllerTest.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/ResourcesControllerTest.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/StocksControllerTest.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/test/java/com/hackerrank/stocktrade/requests/TradesControllerTest.java

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.hackerrank.stocktrade.requests.TradesControllerTest
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 4, Errors: 2, Skipped: 0, Time elapsed: 0.242 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.TradesControllerTest
-com.hackerrank.stocktrade.requests.TradesControllerTest.createTrade -- Time elapsed: 0.072 s <<< ERROR!
+Tests run: 9, Failures: 4, Errors: 2, Skipped: 0, Time elapsed: 0.818 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.TradesControllerTest
+com.hackerrank.stocktrade.requests.TradesControllerTest.createTrade -- Time elapsed: 0.183 s <<< ERROR!
 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade; nested exception is org.hibernate.HibernateException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013)
 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
@@ -160,7 +160,7 @@ Caused by: org.hibernate.HibernateException: More than one row with the given id
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	... 84 more
 
-com.hackerrank.stocktrade.requests.TradesControllerTest.createTradeWithExistingId -- Time elapsed: 0.022 s <<< FAILURE!
+com.hackerrank.stocktrade.requests.TradesControllerTest.createTradeWithExistingId -- Time elapsed: 0.095 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<400> but was:<201>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
@@ -208,7 +208,7 @@ java.lang.AssertionError: Status expected:<400> but was:<201>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.hackerrank.stocktrade.requests.TradesControllerTest.findTradeById -- Time elapsed: 0.034 s <<< FAILURE!
+com.hackerrank.stocktrade.requests.TradesControllerTest.findTradeById -- Time elapsed: 0.128 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
@@ -256,7 +256,7 @@ java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByUserId -- Time elapsed: 0.024 s <<< FAILURE!
+com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByUserId -- Time elapsed: 0.120 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
@@ -304,7 +304,7 @@ java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByStockSymbolAndTradeTypeInDateRange -- Time elapsed: 0.030 s <<< FAILURE!
+com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTradesByStockSymbolAndTradeTypeInDateRange -- Time elapsed: 0.114 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
@@ -352,7 +352,7 @@ java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTrades -- Time elapsed: 0.034 s <<< ERROR!
+com.hackerrank.stocktrade.requests.TradesControllerTest.findAllTrades -- Time elapsed: 0.170 s <<< ERROR!
 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade; nested exception is org.hibernate.HibernateException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)

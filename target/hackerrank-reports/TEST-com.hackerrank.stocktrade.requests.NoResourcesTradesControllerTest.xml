@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" tests="6" failures="2" errors="0" skipped="0" time="0.084">
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange" time="0.005" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTrades" time="0.027">
+<testsuite name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" tests="6" failures="2" errors="0" skipped="0" time="0.100">
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange" time="0.007" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTrades" time="0.021">
     <failure>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade; nested exception is org.hibernate.HibernateException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
@@ -163,10 +163,10 @@ Caused by: org.hibernate.HibernateException: More than one row with the given id
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	... 85 more</failure>
   </testcase>
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingUserId" time="0.005" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findTradeByNonExistingId" time="0.006" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTrade" time="0.025" />
-  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTradeWithExistingId" time="0.016">
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findAllTradesByNonExistingUserId" time="0.006" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.findTradeByNonExistingId" time="0.005" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTrade" time="0.036" />
+  <testcase classname="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest" name="com.hackerrank.stocktrade.requests.NoResourcesTradesControllerTest.createTradeWithExistingId" time="0.025">
     <failure>java.lang.AssertionError: Status expected:&lt;400&gt; but was:&lt;201&gt;
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)

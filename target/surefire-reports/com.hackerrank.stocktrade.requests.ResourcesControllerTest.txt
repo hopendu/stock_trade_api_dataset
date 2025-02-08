@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.hackerrank.stocktrade.requests.ResourcesControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.021 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.ResourcesControllerTest
-com.hackerrank.stocktrade.requests.ResourcesControllerTest.eraseAllRecords -- Time elapsed: 0.012 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.153 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.ResourcesControllerTest
+com.hackerrank.stocktrade.requests.ResourcesControllerTest.eraseAllRecords -- Time elapsed: 0.147 s <<< ERROR!
 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade; nested exception is org.hibernate.HibernateException: More than one row with the given identifier was found: 1, for class: com.hackerrank.stocktrade.model.Trade
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013)
 	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:930)

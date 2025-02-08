@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.hackerrank.stocktrade.requests.StocksControllerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.013 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.StocksControllerTest
-com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByStockSymbolInDateRange -- Time elapsed: 0.012 s <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.086 s <<< FAILURE! -- in com.hackerrank.stocktrade.requests.StocksControllerTest
+com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByStockSymbolInDateRange -- Time elapsed: 0.080 s <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)

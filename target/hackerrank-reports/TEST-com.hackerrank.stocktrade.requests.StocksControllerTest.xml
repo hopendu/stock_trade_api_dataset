@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hackerrank.stocktrade.requests.StocksControllerTest" tests="2" failures="1" errors="0" skipped="0" time="0.018">
-  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByStockSymbolInDateRange" time="0.008">
+<testsuite name="com.hackerrank.stocktrade.requests.StocksControllerTest" tests="2" failures="1" errors="0" skipped="0" time="0.027">
+  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByStockSymbolInDateRange" time="0.018">
     <failure>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;404&gt;
 	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
 	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
@@ -48,6 +48,6 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)</failure>
   </testcase>
-  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByNonExistingStockSymbolInDateRange" time="0.01" />
+  <testcase classname="com.hackerrank.stocktrade.requests.StocksControllerTest" name="com.hackerrank.stocktrade.requests.StocksControllerTest.findHighestAndLowestPriceByNonExistingStockSymbolInDateRange" time="0.009" />
 </testsuite>
 
