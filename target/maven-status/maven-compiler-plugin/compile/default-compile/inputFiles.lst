@@ -5,6 +5,8 @@
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/model/Trade.java
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/model/User.java
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/model/response/SearchStocksQueryResponse.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/model/response/SearchTradesInDateRangeResponse.java
+/Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/model/response/SearchTradesWithLowestAndHighestPriceQueryResponse.java
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/repository/TradeRepository.java
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/repository/UserRepository.java
 /Users/linds/IdeaProjects/stock_trade_api_dataset/src/main/java/com/hackerrank/stocktrade/repository/custom_query/TradeRepositoryCustom.java

@@ -20,6 +20,14 @@ public class SearchStocksQueryResponse {
         this.lowestPrice = lowestPrice;
     }
 
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
     public BigDecimal getHighestPrice() {
         return highestPrice;
     }

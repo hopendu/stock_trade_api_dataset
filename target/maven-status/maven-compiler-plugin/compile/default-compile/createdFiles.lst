@@ -10,8 +10,10 @@ com/hackerrank/stocktrade/model/User.class
 com/hackerrank/stocktrade/repository/UserRepository.class
 com/hackerrank/stocktrade/util/CustomTimestampDeserializer.class
 com/hackerrank/stocktrade/controller/ResourcesController.class
+com/hackerrank/stocktrade/model/response/SearchTradesInDateRangeResponse.class
 com/hackerrank/stocktrade/repository/TradeRepository.class
 com/hackerrank/stocktrade/Application.class
+com/hackerrank/stocktrade/model/response/SearchTradesWithLowestAndHighestPriceQueryResponse.class
 com/hackerrank/stocktrade/util/DateStringToTimestampConvertor.class
 com/hackerrank/stocktrade/model/Trade.class
 com/hackerrank/stocktrade/service/TradeService.class
