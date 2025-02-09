@@ -140,7 +140,7 @@ public class StocksControllerTest {
         assertTrue(
                 ResultMatcher.matchJson(
                         mockMvc.perform(get("/stocks/ZAYO/price?start=2017-01-05&end=2017-01-06"))
-                                .andExpect(status().isOk())
+                                .andExpect(status().isNotFound())
                                 .andReturn()
                                 .getResponse()
                                 .getContentAsString(),

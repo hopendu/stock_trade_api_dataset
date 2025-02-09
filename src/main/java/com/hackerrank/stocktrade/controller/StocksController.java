@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 
@@ -32,21 +30,29 @@ public class StocksController {
 
     }
     @GetMapping("/{symbol}/price")
-    public ResponseEntity<SearchStocksQueryResponse> stock(@PathVariable(name = "symbol") String stockSymbol,
+    public ResponseEntity<?> stock(@PathVariable(name = "symbol") String stockSymbol,
                                                                  @RequestParam(name = "start") @DateTimeFormat(pattern = "yyyy-MM-dd") Date startDate,
                                                                  @RequestParam(name = "end") @DateTimeFormat(pattern = "yyyy-MM-dd") Date endDate) throws IOException {
 
-       SearchStocksQueryResponse searchStocksQueryResponse = this.stocksService.
+
+
+        String jsonResponse = "{\"message\": \"There are no trades in the given date range\"}";
+        ObjectMapper objectMapper = new ObjectMapper();
+        Object response = objectMapper.readValue(jsonResponse, Object.class);
+
+        Optional<SearchStocksQueryResponse> optionalSearchStocksQueryResponse = this.stocksService.
                findHighestAndLowestPriceByNonExistingStockSymbolInDateRange(
                        stockSymbol,
                        startDate,
                        endDate);
 
-       if(searchStocksQueryResponse != null) {
+       if(optionalSearchStocksQueryResponse.isPresent()) {
+           SearchStocksQueryResponse searchStocksQueryResponse = optionalSearchStocksQueryResponse.get();
+           if( searchStocksQueryResponse.getSymbol() == null) {
+               return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+           }
            return new ResponseEntity<>(searchStocksQueryResponse, HttpStatus.OK);
-       } else {
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        }
+       } else return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
 
     }
 }

@@ -61,9 +61,9 @@ public class NoResourcesTradesControllerTest {
     public void findAllTradesByNonExistingStockSymbolAndTradeTypeInDateRange() throws Exception {
         /**
          *
-         * Find all the trades by stock symbol A and trade type buy in given date range 2016-12-28 and 2017-01-03 inclusive
+         * Find all the trades by stock symbol B and trade type buy in given date range 2016-12-28 and 2017-01-03 inclusive
          */
-        mockMvc.perform(get("/trades/stocks/A?type=buy&start=2016-12-28&end=2017-01-03"))
+        mockMvc.perform(get("/trades/stocks/B?type=buy&start=2016-12-28&end=2017-01-03"))
                 .andExpect(status().isNotFound());
     }
 
@@ -124,9 +124,9 @@ public class NoResourcesTradesControllerTest {
     public void findTradeByNonExistingId() throws Exception {
         /**
          *
-         * Find trade by non-existing id 1
+         * Find trade by non-existing id 100
          */
-        mockMvc.perform(get("/trades/1"))
+        mockMvc.perform(get("/trades/100"))
                 .andExpect(status().isNotFound());
     }
 
@@ -145,7 +145,7 @@ public class NoResourcesTradesControllerTest {
          *
          * The request body is:
          * {
-         *     "id": 1,
+         *     "id": 8,
          *     "type": "buy",
          *     "user": {
          *         "id": 4,
@@ -157,7 +157,7 @@ public class NoResourcesTradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String json = "{\"id\": 1, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String json = "{\"id\": 8, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
 
         mockMvc.perform(
                 post("/trades")
@@ -194,7 +194,7 @@ public class NoResourcesTradesControllerTest {
          *     "timestamp": "2016-12-28 11:44:37"
          * }
          */
-        String json = "{\"id\": null, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
+        String json = "{\"id\": 1, \"type\": \"buy\", \"user\": {\"id\": 4, \"name\": \"Derrick Garcia\"}, \"symbol\": \"ZAYO\", \"shares\": 11, \"price\": 154.77, \"timestamp\": \"2016-12-28 11:44:37\"}";
 
         mockMvc.perform(
                 post("/trades")

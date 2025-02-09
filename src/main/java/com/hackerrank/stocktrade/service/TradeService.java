@@ -2,15 +2,15 @@ package com.hackerrank.stocktrade.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hackerrank.stocktrade.model.Trade;
+import com.hackerrank.stocktrade.model.User;
 import com.hackerrank.stocktrade.repository.TradeRepository;
+import com.hackerrank.stocktrade.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,42 +18,81 @@ public class TradeService {
 
     private final TradeRepository tradeRepository;
     private final StocksService stocksService;
+    private final UserRepository userRepository;
 
     @Autowired
-    public TradeService(TradeRepository tradeRepository, StocksService stocksService){
+    public TradeService(TradeRepository tradeRepository, StocksService stocksService, UserRepository userRepository){
         this.tradeRepository = tradeRepository;
         this.stocksService = stocksService;
+        this.userRepository = userRepository;
     }
 
-    public Trade addTrade(Trade trade) {
-        if( trade.getId() != null ) {
-            if(!tradeRepository.existsById(trade.getId()))
-                return this.tradeRepository.save(trade);
-            return null;
+    public Optional<Trade> addTrade(Trade trade) {
+        Optional<Trade> optionalTrade = Optional.empty();
+
+        if( trade == null) return optionalTrade;
+
+        Long id = trade.getId();
+
+        if( id != null ){
+            boolean tradeExists = tradeRepository.existsById(id);
+            if( !tradeExists ) return Optional.of(tradeRepository.save(trade));
         }
-        return null;
+        return optionalTrade;
+
+//        if( trade != null && trade.getId() != null ) {
+//            if(!tradeRepository.existsById(trade.getId())) {
+//                return Optional.of(tradeRepository.save(trade));
+//            }
+//        } return optionalTrade;
     }
 
-    public List<Trade> findAllTrades() {
-        return this.tradeRepository.findAll();
+    public Optional<List<Trade>> findAllTrades() {
+        Optional<List<Trade>> optionalTrades = Optional.empty();
+
+        List<Trade> trades = tradeRepository.findAll();
+
+        return trades.isEmpty() ? optionalTrades : Optional.of(trades);
     }
 
-    public List<Trade> findAllTradeByStockSymbolAndTradeTypeInDateRange(String stockSymbol, String tradeType, Date startDate, Date endDate) throws IOException {
+    public Optional<List<Trade> > findAllTradeByStockSymbolAndTradeTypeInDateRange(String stockSymbol,
+                                                                                   String tradeType,
+                                                                                   Date startDate,
+                                                                                   Date endDate) throws IOException {
+
+        Optional<List<Trade>> optionalTrades = Optional.empty();
 
         List<Trade> trades = this.findAllByStockSymbolAndTradeType(stockSymbol, tradeType);
 
-        if(trades != null && !trades.isEmpty()) {
-            List<Trade> filteredTrades = stocksService.searchTradesInDateRange(trades, startDate, endDate);
-            if(filteredTrades != null && !filteredTrades.isEmpty()) {
-                return filteredTrades;
-            } else return null;
-        }
+        if(trades.isEmpty()) return optionalTrades;
 
-        return null;
+        List<Trade> filteredTrades = stocksService.searchTradesInDateRange(trades, startDate, endDate);
+
+        if(filteredTrades.isEmpty()) return optionalTrades;
+
+        return Optional.of(
+                filteredTrades.stream()
+                        .filter( trade -> trade.getSymbol().equals(stockSymbol) &&
+                                trade.getType().equals(tradeType))
+                        .collect(Collectors.toList())
+        );
 
     }
 
     public List<Trade> findAllByStockSymbolAndTradeType(String symbol, String type) throws IOException {
-        return this.tradeRepository.findBySymbolAndType(symbol, type);
+        List<Trade> tradesByStockSymbol = this.tradeRepository.findAllBySymbol(symbol);
+        return tradesByStockSymbol.stream()
+                .filter( trade -> trade.getType().equals(type))
+                .collect(Collectors.toList());
+    }
+
+    public Optional<Trade> findTradeById(Long id) {
+        return this.tradeRepository.findById(id);
+    }
+
+    public Optional<List<Trade>> findTradeByUser(Long id){
+        Optional<List<Trade>> optionalTrade = Optional.empty();
+        List<Trade> trades = this.tradeRepository.findAllByUserId(id);
+        return  trades.isEmpty() ? optionalTrade : Optional.of(trades);
     }
 }

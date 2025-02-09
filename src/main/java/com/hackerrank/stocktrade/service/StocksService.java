@@ -1,21 +1,14 @@
 package com.hackerrank.stocktrade.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hackerrank.stocktrade.model.Trade;
 import com.hackerrank.stocktrade.model.response.SearchStocksQueryResponse;
-import com.hackerrank.stocktrade.model.response.SearchTradesInDateRangeResponse;
 import com.hackerrank.stocktrade.model.response.SearchTradesWithLowestAndHighestPriceQueryResponse;
 import com.hackerrank.stocktrade.repository.TradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,28 +21,34 @@ public class StocksService {
         this.tradeRepository = tradeRepository;
     }
 
-    public SearchStocksQueryResponse findHighestAndLowestPriceByNonExistingStockSymbolInDateRange(String stockSymbol,
+    public Optional<SearchStocksQueryResponse> findHighestAndLowestPriceByNonExistingStockSymbolInDateRange(String stockSymbol,
                                                                                                   Date startDate,
-                                                                                                  Date endDate){
+                                                                                                  Date endDate) throws IOException {
+        Optional<SearchStocksQueryResponse> optionalSearchStocksQueryResponse = Optional.empty();
 
         List<Trade> trades = this.findByStockSymbol(stockSymbol);
 
-        if(trades != null && !trades.isEmpty()) {
-            List<Trade> tradesInDateRange = this.searchTradesInDateRange(trades, startDate, endDate);
+        if (trades.isEmpty()) return optionalSearchStocksQueryResponse;
 
-            SearchTradesWithLowestAndHighestPriceQueryResponse
-                    searchTradesWithLowestAndHighestPriceQuery = this.searchTradesWithLowestAndHighestPriceQuery(tradesInDateRange);
+        List<Trade> tradesInDateRange = this.searchTradesInDateRange(trades, startDate, endDate);
 
-            Trade tradeWithLowestPrice = searchTradesWithLowestAndHighestPriceQuery.getTradeWithLowestPrice();
-            Trade tradeWithHighestPrice = searchTradesWithLowestAndHighestPriceQuery.getTradeWithHighestPrice();
+        if (tradesInDateRange.isEmpty()) return Optional.of(new SearchStocksQueryResponse());
 
-            if( tradeWithLowestPrice != null && tradeWithHighestPrice != null ) {
+        List<Trade>  tradesWithStockSymbolInDateRange = tradesInDateRange.stream()
+                .filter(trade -> trade.getSymbol().equals(stockSymbol))
+                .collect(Collectors.toList());
 
-                return new SearchStocksQueryResponse(tradeWithLowestPrice.getSymbol(),
-                        tradeWithHighestPrice.getPrice(), tradeWithLowestPrice.getPrice());
-            } else return null;
+        SearchTradesWithLowestAndHighestPriceQueryResponse
+                searchTradesWithLowestAndHighestPriceQuery = this.searchTradesWithLowestAndHighestPriceQuery(tradesWithStockSymbolInDateRange);
 
-        } return null;
+        Trade tradeWithLowestPrice = searchTradesWithLowestAndHighestPriceQuery.getTradeWithLowestPrice();
+        Trade tradeWithHighestPrice = searchTradesWithLowestAndHighestPriceQuery.getTradeWithHighestPrice();
+
+        if( tradeWithLowestPrice != null && tradeWithHighestPrice != null )
+            optionalSearchStocksQueryResponse = Optional.of(new SearchStocksQueryResponse(stockSymbol,
+                    tradeWithHighestPrice.getPrice(), tradeWithLowestPrice.getPrice()));
+
+        return optionalSearchStocksQueryResponse;
 
     }
 
@@ -71,7 +70,7 @@ public class StocksService {
                 .collect(Collectors.toList());
     }
 
-    public List<Trade> findByStockSymbol(String symbol){
-        return tradeRepository.findBySymbol(symbol);
+    public List<Trade> findByStockSymbol(String symbol) {
+            return tradeRepository.findAllBySymbol(symbol);
     }
 }

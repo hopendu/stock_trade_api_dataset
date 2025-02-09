@@ -3,15 +3,13 @@ package com.hackerrank.stocktrade.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="USER")
+@Table(name="user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToOne(mappedBy = "user")
-    private Trade trade;
 
     public User() {
     }
@@ -21,14 +19,6 @@ public class User {
         this.name = name;
     }
 
-
-    public Trade getTrade() {
-        return trade;
-    }
-
-    public void setTrade(Trade trade) {
-        this.trade = trade;
-    }
     public Long getId() {
         return this.id;
     }

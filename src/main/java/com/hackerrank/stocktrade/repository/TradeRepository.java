@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface TradeRepository extends JpaRepository<Trade, Long> , TradeRepositoryCustom, JpaSpecificationExecutor<Trade> {
-    List<Trade> findBySymbol(String symbol);
-    List<Trade> findBySymbolAndType(String symbol, String type);
+    List<Trade> findAllBySymbol(String symbol);
+    List<Trade> findAllByUserId(Long userId);
 }

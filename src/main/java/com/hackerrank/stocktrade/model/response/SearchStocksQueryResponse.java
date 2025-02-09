@@ -20,6 +20,8 @@ public class SearchStocksQueryResponse {
         this.lowestPrice = lowestPrice;
     }
 
+    public SearchStocksQueryResponse() {}
+
     public String getSymbol() {
         return symbol;
     }
